@@ -1,0 +1,13 @@
+# layout for development environment
+# written with IPAR/web development in mind
+# Noah Ratcliff, March 2017
+
+# create new session named "dev1"
+new -s dev1
+
+# set up panes
+splitw -h -l 85
+splitw -v -p 50
+
+# select default pane
+selectp -t 0

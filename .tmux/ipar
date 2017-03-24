@@ -1,0 +1,26 @@
+# launches the dev1 layout, then sets up IPAR specific environment
+
+# source dev1
+source-file ~/.tmux/dev1
+
+# rename session
+rename-session -t dev1 ipar
+
+# navigate to project root in all panes
+setw synchronize-panes
+send-keys "cd ~/Documents/RIT/IGM/ipar/IPAR-JS/;clear" C-m
+setw synchronize-panes
+
+# open vim in pane 0
+send-keys "vim" C-m
+
+# git status in pane 1
+selectp -t 1
+send-keys "clear;git status" C-m
+
+# open project notes in pane 2
+selectp -t 2
+send-keys "vim + ../ipar-notes.txt" C-m
+
+# select main pane
+selectp -t 0
